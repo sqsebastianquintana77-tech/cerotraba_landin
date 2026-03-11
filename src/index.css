@@ -1,0 +1,24 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-void text-ghost font-sans antialiased overflow-x-hidden;
+    cursor: none !important;
+  }
+  
+  a, button, input, textarea, select {
+    cursor: none !important;
+  }
+
+  ::selection {
+    @apply bg-plasma/40 text-ghost;
+  }
+}
+
+@layer utilities {
+  .glow-plasma       { box-shadow: 0 0 20px rgba(123, 97, 255, 0.4); }
+  .text-glow-plasma  { text-shadow: 0 0 20px rgba(123, 97, 255, 0.6); }
+  .biolum-dot        { box-shadow: 0 0 10px #7B61FF; }
+}
