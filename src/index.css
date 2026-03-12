@@ -1,15 +1,17 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
     @apply bg-void text-ghost font-sans antialiased overflow-x-hidden;
-    cursor: none !important;
   }
   
-  a, button, input, textarea, select {
-    cursor: none !important;
+  /* Show custom cursor only on desktop/devices with hover */
+  @media (hover: hover) and (pointer: fine) {
+    body, a, button, input, textarea, select {
+      cursor: none !important;
+    }
   }
 
   ::selection {

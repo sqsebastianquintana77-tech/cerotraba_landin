@@ -45,7 +45,7 @@ export default function CustomCursor() {
     }, []);
 
     return (
-        <>
+        <div className="hidden lg:block pointer-events-none">
             {/* Small dot */}
             <div
                 ref={dotRef}
@@ -58,6 +58,6 @@ export default function CustomCursor() {
                 className={`fixed top-0 left-0 w-8 h-8 border border-plasma/50 rounded-full pointer-events-none z-[9999] -ml-4 -mt-4 transition-transform duration-300 ease-out flex items-center justify-center mix-blend-screen shadow-[0_0_15px_rgba(123,97,255,0.2)]
           ${isHovering ? 'scale-[2.5] bg-plasma/10 border-plasma' : 'scale-100'}`}
             />
-        </>
+        </div>
     );
 }

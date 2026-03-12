@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 export function MagneticButton({ children, className = '', onClick }) {
@@ -8,7 +8,8 @@ export function MagneticButton({ children, className = '', onClick }) {
   useEffect(() => {
     const button = buttonRef.current;
     const text = textRef.current;
-    if (!button || !text) return;
+    const isHoverable = window.matchMedia("(hover: hover)").matches;
+    if (!isHoverable) return;
 
     const xTo = gsap.quickTo(button, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
     const yTo = gsap.quickTo(button, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });

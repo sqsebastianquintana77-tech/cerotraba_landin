@@ -149,31 +149,31 @@ export default function Features() {
   }, []);
 
   return (
-    <section id="features" ref={sectionRef} className="py-32 px-8 min-h-screen bg-void flex flex-col justify-center">
+    <section id="features" ref={sectionRef} className="py-20 md:py-32 px-6 md:px-8 min-h-screen bg-void flex flex-col justify-center">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-          <h2 className="text-4xl md:text-7xl font-sans font-extrabold text-ghost tracking-tighter uppercase leading-[0.88]">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-20 gap-8">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-sans font-extrabold text-ghost tracking-tighter uppercase leading-[0.9] lg:leading-[0.88]">
             Las tres preguntas<br />
-            <span className="font-serif italic text-plasma font-normal text-glow-plasma">que lo cambian todo.</span>
+            <span className="font-serif italic text-plasma font-normal text-glow-plasma text-4xl md:text-5xl lg:text-7xl">que lo cambian todo.</span>
           </h2>
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-plasma/60 max-w-[220px] md:text-right leading-relaxed">
+          <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-plasma/60 max-w-[280px] lg:text-right leading-relaxed">
             Si alguna te genera incomodidad, ya encontraste tu primera traba.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-5">
           {CARDS.map((card, i) => {
             const Icon = card.icon;
             return (
               <div
                 key={i}
-                className="feature-card group relative bg-graphite/40 hover:bg-graphite/70 transition-colors duration-500 rounded-[3rem] p-10 border border-ghost/5 hover:border-plasma/30 flex flex-col h-[560px] overflow-hidden"
+                className="feature-card group relative bg-graphite/40 hover:bg-graphite/70 transition-colors duration-500 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-10 border border-ghost/5 hover:border-plasma/30 flex flex-col min-h-[500px] md:h-[560px] overflow-hidden"
               >
-                <div className="absolute inset-0 rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,rgba(123,97,255,0.12),transparent)]" />
-                <div className="w-12 h-12 rounded-full bg-void border border-plasma/30 flex items-center justify-center mb-8 group-hover:border-plasma/70 transition-all duration-500 relative z-10">
-                  <Icon className="text-plasma/70 group-hover:text-plasma transition-colors" size={20} strokeWidth={1.5} />
+                <div className="absolute inset-0 rounded-[2.5rem] md:rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,rgba(123,97,255,0.12),transparent)]" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-void border border-plasma/30 flex items-center justify-center mb-6 md:mb-8 group-hover:border-plasma/70 transition-all duration-500 relative z-10">
+                  <Icon className="text-plasma/70 group-hover:text-plasma transition-colors" size={18} md:size={20} strokeWidth={1.5} />
                 </div>
                 <p className="font-mono text-[9px] text-plasma/50 uppercase tracking-[0.35em] mb-4 relative z-10">{card.label}</p>
-                <h3 className="text-xl font-serif italic text-ghost leading-snug relative z-10 flex-1">{card.question}</h3>
+                <h3 className="text-lg md:text-xl font-serif italic text-ghost leading-snug relative z-10 flex-1 mb-6">{card.question}</h3>
                 <div className="relative z-10">{card.microUI}</div>
               </div>
             );

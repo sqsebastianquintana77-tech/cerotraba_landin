@@ -55,10 +55,10 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 font-sans">
       {/* Chat Window */}
       {isOpen && (
-        <div className="mb-4 w-80 sm:w-96 bg-void/90 backdrop-blur-xl border border-ghost/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[500px] max-h-[80vh]">
+        <div className="mb-4 w-[calc(100vw-2rem)] sm:w-96 bg-void/90 backdrop-blur-xl border border-ghost/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[450px] md:h-[500px] max-h-[70vh] md:max-h-[80vh]">
           {/* Header */}
           <div className="bg-graphite/80 p-4 border-b border-ghost/5 flex justify-between items-center">
             <div className="flex items-center gap-3">

@@ -21,21 +21,21 @@ export default function Philosophy() {
     <section
       id="philosophy"
       ref={containerRef}
-      className="relative py-40 px-8 min-h-[80vh] bg-void text-ghost flex items-center justify-center overflow-hidden"
+      className="relative py-24 md:py-40 px-6 md:px-8 min-h-[70vh] md:min-h-[80vh] bg-void text-ghost flex items-center justify-center overflow-hidden"
     >
       {/* Background matching Vapor Clinic aesthetic */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_0%,rgba(123,97,255,0.08),transparent)] pointer-events-none" />
-      <div className="absolute top-[10%] -left-[10%] w-[500px] h-[500px] rounded-full bg-plasma/10 blur-[150px] pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-[10%] -right-[10%] w-[600px] h-[600px] rounded-full bg-plasma/5 blur-[150px] pointer-events-none mix-blend-screen" />
+      <div className="absolute top-[10%] -left-[10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full bg-plasma/10 blur-[100px] md:blur-[150px] pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-[10%] -right-[10%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] rounded-full bg-plasma/5 blur-[100px] md:blur-[150px] pointer-events-none mix-blend-screen" />
 
       <div className="relative z-10 max-w-4xl mx-auto w-full flex flex-col items-center text-center">
         <div className="philo-text">
-          <p className="font-mono text-[9px] text-plasma/70 uppercase tracking-[0.4em] mb-10">Nuestro diferencial</p>
-          <div className="space-y-10 text-ghost">
-            <h3 className="font-serif italic text-5xl md:text-7xl text-plasma leading-tight text-glow-plasma">
+          <p className="font-mono text-[9px] text-plasma/70 uppercase tracking-[0.4em] mb-6 md:mb-10">Nuestro diferencial</p>
+          <div className="space-y-8 md:space-y-10 text-ghost">
+            <h3 className="font-serif italic text-4xl md:text-6xl lg:text-7xl text-plasma leading-tight text-glow-plasma">
               Flujos impecables.
             </h3>
-            <div className="text-xl md:text-2xl leading-relaxed font-serif text-ghost/90 space-y-8 max-w-3xl mx-auto">
+            <div className="text-lg md:text-xl lg:text-2xl leading-relaxed font-serif text-ghost/90 space-y-6 md:space-y-8 max-w-3xl mx-auto">
               <p>
                 Eliminamos los cuellos de botella con IA estratégica para transformar procesos lentos en flujos de trabajo impecables y con CeroTraba.
               </p>

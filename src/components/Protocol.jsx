@@ -56,20 +56,20 @@ export default function Protocol() {
   }, []);
 
   return (
-    <section id="protocol" ref={containerRef} className="relative py-24 min-h-[320vh] bg-void">
-      <div className="sticky top-24 text-center mb-16 z-20 px-8 bg-void/80 backdrop-blur-sm py-4 rounded-3xl mx-auto max-w-2xl">
-        <p className="font-mono text-[9px] text-plasma/50 uppercase tracking-[0.4em] mb-4">El proceso</p>
-        <h2 className="text-4xl md:text-7xl font-sans font-extrabold text-ghost tracking-tighter uppercase leading-[0.88]">
+    <section id="protocol" ref={containerRef} className="relative py-20 bg-void">
+      <div className="sticky top-20 md:top-24 text-center mb-12 md:mb-16 z-20 px-6 md:px-8 bg-void/80 backdrop-blur-sm py-4 rounded-3xl mx-auto max-w-2xl">
+        <p className="font-mono text-[9px] text-plasma/50 uppercase tracking-[0.4em] mb-3 md:mb-4">El proceso</p>
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-sans font-extrabold text-ghost tracking-tighter uppercase leading-[0.9] lg:leading-[0.88]">
           Nuestro{' '}
-          <span className="font-serif italic text-plasma font-normal text-glow-plasma">protocolo.</span>
+          <span className="font-serif italic text-plasma font-normal text-glow-plasma text-4xl md:text-5xl lg:text-7xl">protocolo.</span>
         </h2>
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-8 pb-32 z-10 mt-48 md:mt-[15vh]">
+      <div className="relative max-w-5xl mx-auto px-6 md:px-8 pb-20 md:pb-32 z-10 mt-24 md:mt-[15vh]">
         {PROTOCOLS.map((proto, index) => (
           <div
             key={index}
-            className="protocol-card mb-[42vh] w-full rounded-[3rem] shadow-2xl relative overflow-hidden ring-1 ring-ghost/10"
+            className="protocol-card mb-[35vh] md:mb-[42vh] w-full rounded-[2rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden ring-1 ring-ghost/10"
           >
             <img src={proto.img} alt={proto.alt} className="w-full h-auto block" />
           </div>
